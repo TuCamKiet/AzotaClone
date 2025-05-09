@@ -115,6 +115,7 @@ header .user-info {
   display: flex;
   align-items: center;
   gap: 10px;
+  position: relative;
 }
 
 header .user-info img {
@@ -123,7 +124,7 @@ header .user-info img {
   border-radius: 50%;
 }
 
-header .user-info div {
+header .user-info .user-name {
   display: flex;
   flex-direction: column;
 }
@@ -136,4 +137,56 @@ header .user-info span {
 header .user-info .user-role {
   font-size: 12px;
   color: #718096;
+}
+
+.user-dialog {
+  position: absolute;
+  top: calc(100% + 5px); /* Position below the user info */
+  right: 0;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  z-index: 10;
+  display: none; /* Hidden by default */
+  padding: 10px 0;
+  min-width: 250px;
+}
+
+header .user-info:hover .user-dialog {
+  display: block; /* Show on hover */
+}
+
+.dialog-item {
+  display: flex;
+  align-items: center;
+  padding: 10px 15px;
+  cursor: pointer;
+  color: #333;
+  transition: background-color 0.2s ease;
+}
+
+.dialog-item:hover {
+  background-color: #f0f0f0;
+}
+
+.dialog-item a {
+  text-decoration: none;
+  color: inherit;
+  display: flex;
+  align-items: center;
+}
+
+.dialog-item svg {
+  width: 20px;
+  height: 20px;
+  margin-right: 10px;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 1.5;
+}
+
+.dialog-separator {
+  border-top: 1px solid #eee;
+  margin: 5px 0;
 }
