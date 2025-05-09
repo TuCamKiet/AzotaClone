@@ -1,0 +1,122 @@
+.teacher-container {
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  display: flex;
+  min-height: 80vh; /* Adjust as needed */
+}
+
+.teacher-sidebar {
+  width: 300px; /* Adjust sidebar width */
+  padding: 20px;
+  border-right: 1px solid #e0e0e0;
+  display: flex;
+  flex-direction: column;
+}
+
+.search-bar {
+  display: flex;
+  border: 1px solid #ced4da;
+  border-radius: 4px;
+  overflow: hidden;
+  margin-bottom: 20px;
+}
+
+.search-bar input[type="text"] {
+  padding: 10px 15px;
+  border: none;
+  outline: none;
+  font-size: 16px;
+  flex-grow: 1;
+}
+
+.search-bar .search-button {
+  background-color: #f8f9fa;
+  color: #757575;
+  border: none;
+  padding: 10px 15px;
+  cursor: pointer;
+  outline: none;
+}
+
+.search-bar .search-button svg {
+  width: 18px;
+  height: 18px;
+  vertical-align: middle;
+}
+
+.empty-group-message {
+  color: #757575;
+  font-size: 16px;
+}
+
+.teacher-content {
+  flex-grow: 1;
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.empty-data-container {
+  text-align: center;
+  color: #757575;
+}
+
+.empty-data-container .icon-container {
+  position: relative;
+  margin-bottom: 15px;
+}
+
+.empty-data-container .icon-container svg {
+  width: 60px;
+  height: 60px;
+}
+
+.empty-data-container .icon-container .lines {
+  position: absolute;
+  top: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 5px;
+}
+
+.empty-data-container .icon-container .lines div {
+  width: 5px;
+  height: 10px;
+  background-color: #cdd3e0;
+  border-radius: 2px;
+  animation: blink 1.5s infinite alternate;
+}
+
+.empty-data-container .empty-data-text {
+  font-size: 18px;
+}
+
+.scroll-to-top {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: #e0e0e0;
+  color: #555;
+  border: none;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  opacity: 0.7;
+  transition: opacity 0.3s ease;
+}
+
+.scroll-to-top:hover {
+  opacity: 1;
+}
+
+.scroll-to-top svg {
+  width: 20px;
+  height: 20px;
+}

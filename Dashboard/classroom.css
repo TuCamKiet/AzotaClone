@@ -1,0 +1,92 @@
+.class-list-header {
+  padding: 20px;
+  background-color: #f8f9fa; /* Light background */
+  border-bottom: 1px solid #e0e0e0; /* Subtle bottom border */
+  display: flex;
+  flex-direction: column;
+  align-items: space-between;
+  gap: 15px;
+}
+
+.title {
+  color: #343a40; /* Dark gray title */
+  font-size: 24px;
+  margin: 0;
+}
+
+.actions {
+  display: flex;
+  gap: 10px;
+}
+
+.primary-button,
+.secondary-button,
+.search-container input {
+  border-radius: 4px;
+  padding: 10px 15px;
+  font-size: 16px;
+  cursor: pointer;
+  outline: none;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.primary-button {
+  background-color: #3f51b5; /* Blue */
+  color: white;
+  border: none;
+  transition: background-color 0.2s ease;
+}
+
+.primary-button:hover {
+  background-color: #0056b3;
+}
+
+.secondary-button {
+  background-color: #f8f9fa; /* Light background */
+  color: #495057; /* Dark gray text */
+  border: 1px solid #ced4da; /* Light gray border */
+  transition: border-color 0.2s ease, color 0.2s ease;
+}
+
+.secondary-button:hover {
+  border-color: #adb5bd; /* Slightly darker gray border */
+  color: #212529; /* Darker text */
+}
+
+.secondary-button.filter-button {
+  /* Specific styling for the filter button if needed */
+}
+
+.actions svg {
+  width: 18px;
+  height: 18px;
+  vertical-align: middle;
+}
+
+.search-container {
+  display: flex;
+  border: 1px solid #ced4da;
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.search-container input {
+  flex-grow: 1;
+  border: none;
+}
+
+.search-container .search-icon {
+  background: none;
+  border: none;
+  padding: 10px 15px;
+  cursor: pointer;
+  color: #757575;
+}
+
+.search-container .search-icon svg {
+  width: 18px;
+  height: 18px;
+  vertical-align: middle;
+}

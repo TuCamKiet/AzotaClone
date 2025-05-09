@@ -1,0 +1,81 @@
+.empty-state-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  background-color: #f9f9f9; /* Light background */
+  border-radius: 8px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+  text-align: center;
+  min-height: 70vh;
+}
+
+.icon-wrapper {
+  position: relative;
+  margin-bottom: 20px;
+}
+
+.icon-wrapper svg {
+  width: 60px;
+  height: 60px;
+}
+
+.sparkles {
+  position: absolute;
+  top: -15px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 8px;
+}
+
+.sparkles div {
+  width: 3px;
+  height: 8px;
+  background-color: #3f51b5;
+  border-radius: 2px;
+  opacity: 0.8;
+  animation: blink 1.5s infinite alternate;
+}
+
+.message {
+  font-size: 18px;
+  color: #555;
+  margin-bottom: 25px;
+}
+
+.primary-button {
+  background-color: #3f51b5; /* Blue primary color */
+  color: white;
+  border: none;
+  border-radius: 6px;
+  padding: 12px 25px;
+  font-size: 16px;
+  cursor: pointer;
+  outline: none;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  transition: background-color 0.3s ease;
+}
+
+.primary-button svg {
+  width: 18px;
+  height: 18px;
+}
+
+.primary-button:hover {
+  background-color: #1976d2; /* Darker blue on hover */
+}
+
+@keyframes blink {
+  0% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  100% {
+    opacity: 0.5;
+    transform: translateY(-5px);
+  }
+}
