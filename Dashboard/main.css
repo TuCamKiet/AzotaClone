@@ -1,0 +1,216 @@
+body {
+  margin: 0;
+  font-family: "Inter", sans-serif;
+  background-color: #f0f0f0;
+  display: flex;
+}
+
+.main-container {
+  display: flex;
+  min-height: 100vh;
+  width: 100%;
+}
+
+/* Sidebar */
+.sidebar {
+  width: fit-content;
+  background-color: #003da5;
+  color: white;
+  display: flex;
+  flex-direction: column;
+}
+
+.sidebar .logo {
+  padding: 20px;
+  text-align: center;
+}
+
+.sidebar .nav-menu {
+  padding-top: 20px;
+}
+
+.sidebar .nav-menu ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.sidebar .nav-menu ul li {
+  padding: 15px 20px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.sidebar .nav-menu ul li.active,
+.sidebar .nav-menu ul li:hover {
+  background-color: #002a68;
+}
+
+.sidebar .nav-menu ul li i {
+  font-size: 18px;
+}
+
+.sidebar .bottom-nav {
+  padding: 15px 20px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  border-top: 1px solid #004ba0;
+}
+
+.sidebar .bottom-nav:hover {
+  background-color: #002a68;
+}
+
+.chat-icon {
+  padding: 15px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.chat-icon svg {
+  cursor: pointer;
+}
+
+/* Main Content */
+.main-content {
+  padding: 20px;
+  flex-grow: 1;
+  justify-content: center;
+}
+
+header {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+header .header-left {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+header .vip-badge {
+  display: flex;
+  align-items: center;
+  background: linear-gradient(-45deg, #7953cd, #0190cd, #23a6d5, #764ada);
+  background-size: 500% auto;
+  animation: textShine 5s ease-in-out infinite alternate;
+  color: white;
+  padding: 8px 15px;
+  border-radius: 15px;
+  font-weight: 600;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+header .notification-bell {
+  cursor: pointer;
+  position: relative;
+}
+
+header .notification-bell i {
+  font-size: 20px;
+  color: #4a5568;
+}
+
+header .user-info {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+header .user-info img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+}
+
+header .user-info div {
+  display: flex;
+  flex-direction: column;
+}
+
+header .user-info span {
+  font-weight: 600;
+  color: #4a5568;
+}
+
+header .user-info .user-role {
+  font-size: 12px;
+  color: #718096;
+}
+
+.welcome-section {
+  padding: 20px;
+  background-color: white;
+  border-radius: 8px;
+  margin-bottom: 20px;
+}
+
+.welcome-section h1 {
+  color: #2d3748;
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.welcome-section p {
+  color: #4a5568;
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+.welcome-section a {
+  color: #3182ce;
+  text-decoration: none;
+}
+
+.welcome-section a:hover {
+  text-decoration: underline;
+}
+
+.action-buttons {
+  display: flex;
+  justify-content: space-evenly;
+  margin-bottom: 20px;
+}
+
+.action-card {
+  background-color: white;
+  border-radius: 8px;
+  padding: 20px;
+  text-align: center;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 250px;
+  height: 150px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.action-card:hover {
+  background-color: #edf2f7;
+}
+
+.action-card i {
+  font-size: 36px;
+  color: #4a5568;
+  margin-bottom: 10px;
+}
+
+.action-card p {
+  color: #4a5568;
+  font-size: 16px;
+  font-weight: 500;
+}

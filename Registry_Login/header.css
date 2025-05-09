@@ -1,0 +1,38 @@
+header {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.logo {
+  color: #0057b5;
+  font-size: 25px;
+}
+
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  column-gap: 20px;
+}
+
+.navbar div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  column-gap: 5px;
+}
+
+a {
+  text-decoration: none;
+  color: #000;
+}
+
+.language-switch,
+.theme-switch {
+  cursor: pointer;
+}
+
+.theme-switch {
+  color: #545557;
+}
