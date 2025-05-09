@@ -18,9 +18,22 @@ async function loadHeader(section) {
     const headerContent = await response.text();
     document.getElementById("section-content").innerHTML = headerContent;
   } catch (error) {
-    console.error("Lỗi khi tải header:", error);
+    console.error("Lỗi khi tải:", error);
     document.getElementById(
       "section-content"
     ).innerHTML = `<p>Không thể tải ${section}.</p>`;
   }
 }
+
+document.addEventListener("DOMContentLoaded", async function () {
+  try {
+    const response = await fetch("popup_ad.html");
+    const headerContent = await response.text();
+    document.getElementById("adPopupOverlay").innerHTML = headerContent;
+  } catch (error) {
+    console.error("Lỗi khi tải:", error);
+    document.getElementById(
+      "adPopupOverlay"
+    ).innerHTML = `<p>Không thể tải popup_ad.html.</p>`;
+  }
+});

@@ -1,0 +1,74 @@
+.ad-popup-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent black */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000; /* Ensure it's on top of everything */
+}
+
+.ad-popup {
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  overflow: hidden;
+  max-width: 90%;
+  max-height: 90%;
+}
+
+.ad-content {
+  width: 50vw;
+  height: 70vh;
+  overflow: hidden;
+}
+
+.ad-content img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center center;
+}
+
+.ad-actions {
+  padding: 15px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.ad-actions label {
+  color: #555;
+  font-size: 0.9em;
+  user-select: none; /* Prevent text selection on click */
+  display: flex;
+  align-items: center;
+}
+
+.ad-actions input[type="checkbox"] {
+  margin-right: 8px;
+}
+
+.close-button {
+  background-color: #007bff; /* Blue close button */
+  color: white;
+  border: none;
+  border-radius: 6px;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.close-button:hover {
+  background-color: #0056b3;
+}
+
+/* Initially hide the overlay */
+/* .ad-popup-overlay {
+  display: none;
+} */
