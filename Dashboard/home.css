@@ -1,0 +1,75 @@
+.welcome-section {
+  padding: 20px;
+  background-color: white;
+  border-radius: 8px;
+  margin-bottom: 20px;
+}
+
+.welcome-section h1 {
+  color: #2d3748;
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.welcome-section p {
+  color: #4a5568;
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+.welcome-section a {
+  color: #3182ce;
+  text-decoration: none;
+}
+
+.welcome-section a:hover {
+  text-decoration: underline;
+}
+
+.action-buttons {
+  display: flex;
+  justify-content: space-evenly;
+  margin-bottom: 20px;
+}
+
+.action-card {
+  background-color: white;
+  border-radius: 8px;
+  padding: 20px;
+  text-align: center;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 250px;
+  height: 150px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.action-card:hover {
+  background-color: #edf2f7;
+}
+
+.action-card i {
+  font-size: 36px;
+  color: #4a5568;
+  margin-bottom: 10px;
+}
+
+.action-card p {
+  color: #4a5568;
+  font-size: 16px;
+  font-weight: 500;
+}
+
+.chat-icon {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+}
+
+.chat-icon svg {
+  cursor: pointer;
+}

@@ -1,21 +1,26 @@
 const navLinks = document.querySelectorAll(".nav-menu ul li");
-const actionCards = document.querySelectorAll(".action-card");
 
 navLinks.forEach((link) => {
   link.addEventListener("click", function () {
     navLinks.forEach((navLink) => navLink.classList.remove("active"));
     this.classList.add("active");
+    loadHeader(this.getAttribute("id"));
   });
 });
 
-actionCards.forEach((card) => {
-  card.addEventListener("mouseenter", () => {
-    card.style.transform = "scale(1.05)";
-    card.style.boxShadow = "0 4px 8px rgba(0, 0, 0, 0.1)";
-  });
+// Gọi hàm loadHeader khi trang tải lại
+document.addEventListener("DOMContentLoaded", loadHeader());
 
-  card.addEventListener("mouseleave", () => {
-    card.style.transform = "scale(1)";
-    card.style.boxShadow = "0 2px 4px rgba(0, 0, 0, 0.1)";
-  });
-});
+async function loadHeader(section) {
+  section = section || "home"; // Mặc định là home nếu không có tham số
+  try {
+    const response = await fetch(section + ".html");
+    const headerContent = await response.text();
+    document.getElementById("section-content").innerHTML = headerContent;
+  } catch (error) {
+    console.error("Lỗi khi tải header:", error);
+    document.getElementById(
+      "section-content"
+    ).innerHTML = `<p>Không thể tải ${section}.</p>`;
+  }
+}

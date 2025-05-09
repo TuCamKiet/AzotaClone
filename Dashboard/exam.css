@@ -1,0 +1,176 @@
+.main-content-area {
+  padding: 20px;
+  background-color: #f8f9fa; /* Light background */
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
+}
+
+.action-bar {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  margin-bottom: 20px;
+}
+
+.search-input {
+  display: flex;
+  border: 1px solid #ced4da;
+  border-radius: 4px;
+  overflow: hidden;
+  flex-grow: 1;
+}
+
+.search-input input[type="text"] {
+  padding: 10px 15px;
+  border: none;
+  outline: none;
+  font-size: 16px;
+  flex-grow: 1;
+}
+
+.search-input .search-icon-button {
+  background-color: #f8f9fa;
+  color: #757575;
+  border: none;
+  padding: 10px 15px;
+  cursor: pointer;
+  outline: none;
+}
+
+.search-input .search-icon-button svg {
+  width: 18px;
+  height: 18px;
+  vertical-align: middle;
+}
+
+.action-buttons {
+  display: flex;
+  gap: 10px;
+}
+
+.action-button {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 4px;
+  font-size: 16px;
+  cursor: pointer;
+  outline: none;
+  transition: background-color 0.2s ease;
+}
+
+.action-button svg {
+  width: 18px;
+  height: 18px;
+  vertical-align: middle;
+}
+
+.action-button.primary {
+  background-color: #17a2b8; /* Blue */
+  color: white;
+}
+
+.action-button.primary:hover {
+  background-color: #0056b3;
+}
+
+.action-button.success {
+  background-color: #28a745; /* Green */
+  color: white;
+}
+
+.action-button.success:hover {
+  background-color: #1e7e34;
+}
+
+.content-header {
+  margin-bottom: 20px;
+}
+
+.content-header h1 {
+  color: #343a40;
+  font-size: 24px;
+  margin: 0;
+}
+
+.table-wrapper {
+  overflow-x: auto; /* For potential horizontal scrolling */
+}
+
+.data-table {
+  width: 100%;
+  border-collapse: collapse;
+  border: 1px solid #e0e0e0;
+  border-radius: 4px;
+  background-color: white;
+}
+
+.data-table thead th {
+  padding: 12px 15px;
+  background-color: #f8f9fa;
+  color: #495057;
+  text-align: left;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+.data-table tbody td {
+  padding: 12px 15px;
+  border-bottom: 1px solid #f0f0f0;
+  display: flex;
+  align-items: center;
+}
+
+.data-table tbody tr:last-child td {
+  border-bottom: none;
+}
+
+.data-table th input[type="checkbox"],
+.data-table td input[type="checkbox"] {
+  margin-right: 8px;
+  vertical-align: middle;
+}
+
+.sort-button {
+  background: none;
+  border: none;
+  padding: 0;
+  margin-left: 5px;
+  cursor: pointer;
+  outline: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 2px;
+  color: #495057;
+}
+
+.sort-button div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.sort-button div svg {
+  width: 8px;
+  height: 8px;
+  vertical-align: middle;
+}
+
+.tag {
+  background-color: #e9ecef;
+  color: #495057;
+  padding: 2px 5px;
+  border-radius: 3px;
+  font-size: 0.9em;
+  margin-left: 5px;
+}
+
+.footer {
+  padding: 15px 20px;
+  text-align: right;
+  color: #6c757d;
+  font-size: 0.9em;
+  border-top: 1px solid #e0e0e0;
+}
