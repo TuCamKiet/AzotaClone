@@ -29,11 +29,20 @@ document.addEventListener("DOMContentLoaded", async function () {
   try {
     const response = await fetch("popup_ad.html");
     const headerContent = await response.text();
-    document.getElementById("adPopupOverlay").innerHTML = headerContent;
+    document.getElementById("adPopupOverlay-div").innerHTML = headerContent;
+    // Dynamically load the script
+    const script = document.createElement("script");
+    script.src = "popup_ad.js";
+    script.onload = () => {
+      if (typeof adPopupOverlay === "function") {
+        adPopupOverlay();
+      }
+    };
+    document.body.appendChild(script);
   } catch (error) {
     console.error("Lỗi khi tải:", error);
     document.getElementById(
-      "adPopupOverlay"
+      "adPopupOverlay-div"
     ).innerHTML = `<p>Không thể tải popup_ad.html.</p>`;
   }
 });
